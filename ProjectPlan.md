@@ -1,13 +1,17 @@
-Overview: 
+Overview: We want to do an analysis on how the hash rate of different cryptocurrencies impacts the price of these coins over different time horizons. We want to analyze the five largest (by market capitalization) cryptocurrencies whose hash rate data is available via API.
 
-Research Questions: 
+Research Questions: The general question we want to answer is, to what extent does the movement in hash rate affect the movement in price of these assets? However, there are many smaller questions that are inherent in that larger question. Assuming the relationship isn't directly linear, one important consideration to have is how the relationship between hash rate and price has changed over the years (is it more indicative of price movement now or when crypto was just beginning?).
 
-Team: Ankaan Bera - Brian Jett - 
+Team/Roles: The team consists of Ankaan Bera and Brian Jett and we expect to have very similar roles during this project. We want to have a truly collaborative effort in all facets of the project including deciding what data we want to collect, what time horizons we want to focus on, the different methods we want to use to analyze this data, etc.
 
-Datasets: 
+Datasets: We will use CoinGecko API for the crypto prices dataset and Glassnode API for the hash rate dataset. We want to experiment with the magnitude of the datasets based on different parameters before we lock down the exact specifications of each dataset. The reason we want to do this, is because we want to get as much relevant data without the dataset being too cumbersome.
 
-Timeline:
-
+Timeline: 
+1) Data Lifecycle, Ethical Data Handling, Storage and Organization: For the first three parts of this project, Ankaan and I want to tackle this together. This is the base steps for truly understanding what we want to do for this project, so it's important that we bounce ideas off each other for what Data Lifecycle we want to view this project through, how we can use these APIs and data in a professional and ethical manner, and the exact specifications we want for our two datasets. We have already completed some of the preliminary work for these steps, but ideally we would have this done in its entirety by Friday, October 24th.
+2) Storage and Organization, Extraction and Enrichment, Data Integration, Data Quality: Again, like most of this project, we would like to both collaborate on these steps. These are vital steps to ensuring that our datasets are up to the standard that we want, and will be able to offer us insights into answering our research question. For this part of the project, we would like to take until the end of October to ensure that we are having the neccessary time to analyze the data and ensure that it is up to the standard which we need before diving into the heart of the project.
+3) Data Cleaning, Workflow automation and provenance: This is the heart of the project and we want to give ourselves enough time to investigate the relationship between hash price and crypto price and go down as many rabbit holes as neccessary to get a sufficient answer. This will be done collaboratively; however, unlike the other steps, a good deal of the research may be done individually with each of us trying different methods to answer the questions. It will still be collaborative in the sense of us sharing our different results and methods, but a lot of the actual work will be done individually and then we will discuss which methods we view as most promising intermittently throughout this process. Since this is the heart of the project, we want to give ourselves almost a whole month to bounce ideas off each other and truly get into the depths of the data, so we want to be done with this by the end of Thanksgiving break.
+4) Reproducibility and transparency, Metadata and data documentation: This will be the "review" stage of our project. We have all the materials we need, now it's just time to format them in a way to be reproducible. The timeline for completing this will be from the end of Thanksgiving break until the assignment deadline. Since there will be no new analysis of data, but rather summarizing a lot of what we did, we don't expect this to take a significant amount of time so long as we do the prior steps properly.
+.
 Constraints:
 
 Gaps:
