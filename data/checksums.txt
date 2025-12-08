@@ -1,0 +1,4 @@
+btc_price_yahoo.json	abe043a7e7dbc16e638de43bb3fc90a0d22f69383ce461c8f67ec9034f6c4f20
+YahooFinance	2025-12-08T22:23:31.273463+00:00
+btc_hashrate_blockchain.json	4b63738d944c82e484a5aff19a032dcd12d700a06178cf5c968fe85c16b10e8f
+Blockchain.com	2025-12-08T22:23:31.848840+00:00
