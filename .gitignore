@@ -1,0 +1,9 @@
+data/raw/
+data/processed/
+!data/checksums.txt
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
+.env
+*.env

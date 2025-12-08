@@ -1,4 +1,0 @@
-column,dtype,num_non_null,num_null,min,max
-price_btc,float64,1826,0,3457.792724609375,61318.95703125
-hashrate_btc,float64,1826,0,15177350.2495293,300302320.6683329
-date,object,1826,0,2018-01-01,2022-12-31
