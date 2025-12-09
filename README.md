@@ -47,6 +47,8 @@ Both datasets are then restricted to a shared window that runs from January 1, 2
 
 The merged dataset is written to `data/processed/btc_merged.csv` and is the single source of truth for downstream analysis. Scripts that generate plots or run regression never reach back into the raw JSON files. That separation makes it very clear where cleaning ends and analysis begins.
 
+The Box link to the raw JSON data from the APIs and merged CSV data is [https://uofi.box.com/s/3mvys9hkkiucyrwqk2l45x96zhju5w2t](https://uofi.box.com/s/3mvys9hkkiucyrwqk2l45x96zhju5w2t)
+
 **Ethics, legality, and access**  
 Both data sources are public and aggregate. There is no personal or sensitive information anywhere in the pipeline. Yahoo Finance and Blockchain.com expose this data specifically for analysis and visualization, and the project uses the data in that spirit: educational, non-commercial, and reproducible. Because we pull the data programmatically, anyone re-running the scripts can obtain the same inputs (subject to the providers keeping their endpoints stable).
 
