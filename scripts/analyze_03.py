@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 
 
+# Set up project directories
 
 base_dir = Path(".").resolve()
 data_dir = base_dir / "data"
@@ -15,11 +16,13 @@ tables_dir = results_dir / "tables"
 figures_dir.mkdir(parents=True, exist_ok=True)
 tables_dir.mkdir(parents=True, exist_ok=True)
 
+# Load merged dataset
 
 merged_data_path = processed_dir / "btc_merged.csv"
 df = pd.read_csv(merged_data_path, parse_dates=["timestamp"])
 df = df.set_index("timestamp").sort_index()
 
+# Plot Bitcoin price
 
 plt.figure()
 plt.plot(df.index, df["price_btc"], label="BTC Price")
@@ -32,6 +35,8 @@ plot_path = figures_dir / "btc_price.png"
 plt.savefig(plot_path)
 plt.close()
 
+# Plot Bitcoin hashrate
+
 plt.figure()
 plt.plot(df.index, df["hashrate_btc"], label="Hashrate Value")
 plt.title("Bitcoin Hashrate Over Time")
@@ -43,7 +48,7 @@ plot_path = figures_dir / "btc_hashrate.png"
 plt.savefig(plot_path)
 plt.close()
 
-
+# Normalized comparison plot
 df_norm = pd.DataFrame()
 df_norm["price_norm"] = df["price_btc"] / df["price_btc"].iloc[0]
 df_norm["hashrate_norm"] = df["hashrate_btc"] / df["hashrate_btc"].iloc[0]
@@ -61,6 +66,7 @@ plot_path = figures_dir / "btc_price_hashrate_normalized.png"
 plt.savefig(plot_path)
 plt.close()
 
+# OLS regression
 
 reg_df = df[["price_btc", "hashrate_btc"]].dropna()
 
