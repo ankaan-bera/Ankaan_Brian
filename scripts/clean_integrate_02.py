@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timezone
 import pandas as pd
 
+# Set up project directories
 
 base_dir = Path(".").resolve()
 data_dir = base_dir / "data"
@@ -14,10 +15,11 @@ results_dir = base_dir / "results"
 tables_dir = results_dir / "tables"
 tables_dir.mkdir(parents=True, exist_ok=True)
 
+# Define shared analysis window
 start_dt = datetime(2018, 1, 1, tzinfo=timezone.utc)
 end_dt   = datetime(2023, 1, 1, tzinfo=timezone.utc)   
 
-
+# Load and clean price data
 price_path = raw_dir / "btc_price_yahoo.json"
 with price_path.open() as f:
     price_raw = json.load(f)
@@ -40,6 +42,7 @@ price_df = price_df.sort_index()
 
 price_df = price_df.resample("1D").ffill()
 
+# Load and clean hashrate data
 
 hash_path = raw_dir / "btc_hashrate_blockchain.json"
 with hash_path.open() as f:
@@ -53,6 +56,8 @@ hash_df = hash_df.rename(columns={"y": "hashrate_btc"})
 
 hash_df = hash_df.resample("1D").ffill()
 
+# Merge price and hashrate
+
 merged = price_df.join(hash_df, how="inner")
 merged = merged.sort_index()
 
@@ -65,6 +70,7 @@ merged["date"] = merged.index.date
 out_path = processed_dir / "btc_merged.csv"
 merged.to_csv(out_path, index_label="timestamp")
 
+# Generate data quality summary
 
 rows = []
 for col in merged.columns:
