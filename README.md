@@ -103,14 +103,34 @@ Finally, the same general template could be applied outside of Bitcoin. The stru
 
 ## Reproducibility
 
-1. Clone the GitHub repository to your local machine.
-2. Create and activate a Python virtual environment.
-3. Install the required dependencies and run the full pipeline:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ankaan-bera/Ankaan_Brian.git
+   cd Ankaan_Brian
+   ```
+
+2. Create and activate a Python virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
-   python scripts/data_01.py
-   python scripts/clean_integrate_02.py
-   python scripts/analyze_03.py
+   ```
+
+4. Run the full workflow:
+   ```bash
+   snakemake --cores 1
+   ```
+
+5. To run steps manually:
+   ```bash
+   python src/fetch_data_01.py
+   python src/clean_integrate_02.py
+   python src/analyze_03.py
+   ```
 
 ## References
 
