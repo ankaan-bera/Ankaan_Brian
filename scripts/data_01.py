@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import requests
 
-
+# Compute SHA-256 checksum for a file
 def sha256_of_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
